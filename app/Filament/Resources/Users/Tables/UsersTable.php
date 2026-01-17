@@ -19,7 +19,18 @@ class UsersTable
                     ->searchable(),
                 TextColumn::make('email')
                     ->label('Email address')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: false),
+                TextColumn::make('address')
+                ->sortable()
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault:false),
+                    TextColumn::make('postal_code')
+                ->sortable()
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault:false),
+
+
                 TextColumn::make('email_verified_at')
                     ->dateTime()
                     ->sortable(),
